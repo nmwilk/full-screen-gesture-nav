@@ -17,5 +17,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.transientButton.setOnClickListener { startActivity(Intent(this, TransientBarsActivity::class.java)) }
         binding.opaqueButton.setOnClickListener { startActivity(Intent(this, OpaqueBarsActivity::class.java)) }
+        binding.navigationButton.setOnClickListener { startActivity(Intent(this, NavigationBarsActivity::class.java)) }
     }
 }

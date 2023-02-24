@@ -25,6 +25,9 @@
         <activity
             android:name=".OpaqueBarsActivity"
             android:exported="true" />
+        <activity
+            android:name=".NavigationBarsActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
