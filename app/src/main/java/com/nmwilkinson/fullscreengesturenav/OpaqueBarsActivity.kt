@@ -37,7 +37,7 @@ class OpaqueBarsActivity : AppCompatActivity() {
             logcat { "insets changed $insets" }
             binding.excludeGesturesLayout.setWindowInsets(insets)
 
-            windowInsets
+            ViewCompat.onApplyWindowInsets(view, windowInsets)
         }
     }
 
