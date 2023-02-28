@@ -29,11 +29,11 @@ class TransientBarsActivity : AppCompatActivity() {
             WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
 
         ViewCompat.setOnApplyWindowInsetsListener(window.decorView) { view, windowInsets ->
-            ViewCompat.onApplyWindowInsets(view, windowInsets)
-            val insets = windowInsets.getInsets(types)
+            val appliedInsets = ViewCompat.onApplyWindowInsets(view, windowInsets)
+            val insets = appliedInsets.getInsets(types)
             logcat { "insets changed $insets" }
             binding.excludeGesturesLayout.setWindowInsets(insets)
-            windowInsets
+            appliedInsets
         }
     }
 
